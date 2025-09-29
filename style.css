@@ -15,6 +15,8 @@ html{
 body{
   font-family:'Poppins',sans-serif;
   background-color:var(--background-color);
+  max-width:1400px;
+  margin:0 auto;
 }
 a{
   color:var(--link-color);
@@ -55,7 +57,7 @@ nav .right a span{
   padding:50px 50px;
   align-items:center;
   gap:40px;
-  margin-bottom:100px;
+  margin-bottom:75px;
 }
 
 .Hero-section .Text h2{
@@ -69,7 +71,8 @@ nav .right a span{
 .Hero-section .Headshot {
   display:flex;
   flex:2;
-  justify-content:right;
+  justify-content:flex-end;
+  
 
 }
 .Hero-section .Headshot img{
@@ -88,7 +91,7 @@ nav .right a span{
   
 }
 .Hero-section .Text .links a{
-  display:inline=block;
+  display:inline-block;
   padding:5px 10px;
   border:2px;
    border-style:solid;
@@ -142,6 +145,87 @@ border-radius:2px;
 .Skills-section .cells .cell span{
 font-size: 18px;
 }
+/*Section 3:project Section*/
+.Projects-section{
+  padding: 0 50px;
+  margin-bottom:100px;
+}
+.Projects-section h2{
+  text-align:center;
+  font-size:35px;
+}
+.Projects-section p{
+  text-align:center;
+  margin-bottom:20px;
+}
+.Projects-section .project-cards {
+display:flex;
+  justify-content:center;
+  
+}
+.Projects-section .project-cards .project-card{
+  width:200px;
+  height:250px;
+  align-items:center; 
+   justify-content:center;
+  border:2px dashed #292828;
+  border-radius:5px;
+  display:flex;
+}
+.Projects-section .project-cards .project-card h2{ 
+  text-align:center;
+  justify-content:center;
+}
+/*Section 4:Contact*/
+.Contact-section{
+  padding:0 50px;
+  margin-bottom:100px;
+} 
+.Contact-section h2{
+  text-align:center;
+  font-size:35px;
+}
+.Contact-section .group{
+  display:flex;
+  gap:50px;
+}
+.Contact-section .group .text{
+  flex:3;
+  margin-top:20px;
+}
+.Contact-section .group form{
+  flex:3;
+  display:flex;
+  flex-direction:column;
+}
+.Contact-section .group form input,.Contact-section .group form textarea{
+  font-family:'poppins',sans-serif;
+  border:2px solid var(--link-color);
+  background-color:transparent;
+  padding:10px;
+  margin-bottom:15px;
+  outline:none;
+  resize:none;
+}
+.Contact-section .group form button{
+ 
+    font-family:'poppins',sans-serif;
+  justify-content:right;
+  border-radius:5px;
+  border:none;
+  background-color:var(--link-color);
+  color:white;
+  height:50px;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.1s;
+
+}
+
+.Contact-section .group form button:hover{
+filter:brightness(0.9);
+}
+
 
 @media (max-width:800px){
   /*section1:hero*/
@@ -154,8 +238,9 @@ font-size: 18px;
   .Hero-section{
     flex-direction:column-reverse;
     margin-top:20px;
-   
+  
 }
+
 }
 @media (max-width:740px){
   .Hero-section .Text h2{
@@ -200,7 +285,21 @@ font-size: 18px;
   .Skills-section {
     padding:0 20px;
   }
-  .Skills-secetion .cells .cell span{
+  .Skills-section .cells .cell span{
     font-size: 16px;
   }
+/*Section 3:Projects*/
+.Projects-section{
+  padding:0 20px;
+}
+.Projects-section .project-cards .project-card h2{
+  font-size:30px;
+}
+/*Section 4:Contact*/
+.Contact-section{
+  padding:0 20px;
+}
+.Contact-section .group{
+  flex-direction:column;
+}
 }
